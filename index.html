@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paws & Homes | Stray Rescue & Pet Adoption Gallery</title>
+
+  <link rel="icon" type="animal.webp" href="animal.webp">
+
+  <link rel="stylesheet" href="style.css">
+  <!-- Google Fonts for the Cozy Handwritten Look -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Decorative Stars/Leaves scattered using overlay spans -->
+  <span class="deco-star s1">⭐</span>
+  <span class="deco-star s2">✨</span>
+  <span class="deco-leaf l1">🍁</span>
+  <span class="deco-leaf l2">🍂</span>
+
+  <!-- Navigation Header -->
+  <header class="navbar">
+    <div class="container nav-content">
+      <h1 class="logo">🐾 PAWS & HOMES</h1>
+      <nav>
+        <a href="#adopt">Adopt</a>
+        <a href="#alerts">Community Alerts</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Banner -->
+  <section class="hero">
+    <div class="container hero-card">
+      <h2>Every Stray Deserves a Safe Home 🏡</h2>
+      <p>Connecting rescued neighborhood dogs and cats with caring local families.</p>
+      <a href="#adopt" class="btn-primary">Meet Our Rescues</a>
+    </div>
+  </section>
+
+  <!-- Pet Adoption Gallery -->
+  <main id="adopt" class="container">
+    <h3 class="section-title">Available for Adoption</h3>
+    <div class="pet-grid">
+
+      <!-- Pet Card 1 -->
+      <article class="pet-card">
+        <div class="photo-wrapper">
+          <img src="bantay.jpg" alt="Bantay" class="pet-photo">
+          <div class="tag-container">
+            <span class="tag Vaccinated">Vaccinated</span>
+            <span class="tag Trained">Trained</span>
+          </div>
+        </div>
+        <div class="pet-info">
+          <h4>Bantay</h4>
+          <p>Gentle, playful, and great with kids. Rescued near the barangay hall and vaccinated.</p>
+          <a href="mailto:rescue@community.org?subject=Adopt%20Bantay" class="btn-adopt">Adopt Me! ♡</a>
+        </div>
+      </article>
+
+      <!-- Pet Card 2 -->
+      <article class="pet-card">
+        <div class="photo-wrapper">
+          <img src="Muning.jpeg" alt="Muning" class="pet-photo">
+          <div class="tag-container">
+            <span class="tag Litter-trained">Litter-trained</span>
+          </div>
+        </div>
+        <div class="pet-info">
+          <h4>Muning</h4>
+          <p>Calm, litter-trained tabby who loves quiet naps by the window. Dewormed and healthy.</p>
+          <a href="mailto:rescue@community.org?subject=Adopt%20Muning" class="btn-adopt">Adopt Me! ♡</a>
+        </div>
+      </article>
+
+      <!-- Pet Card 3 -->
+      <article class="pet-card">
+        <div class="photo-wrapper">
+          <img src="Upin and Ipin.jpg" alt="Luna" class="pet-photo">
+          <div class="tag-container">
+            <span class="tag Puppiess">Puppies</span>
+            <span class="tag Unvaccinated">Unvaccinated</span>
+          </div>
+        </div>
+        <div class="pet-info">
+          <h4>Luna</h4>
+          <p>Energetic puppies looking for an active home with a fenced yard. Very fast learner.</p>
+          <a href="mailto:rescue@community.org?subject=Adopt%20Luna" class="btn-adopt">Adopt Me! ♡</a>
+        </div>
+      </article>
+
+    </div>
+  </main>
+
+  <!-- Community Bulletins & Events Section -->
+  <section id="alerts" class="events-section">
+    <div class="container">
+      <h3 class="section-title">🐾 Community Alerts</h3>
+      <div class="alerts-grid">
+        <div class="alert-card lost">
+          <h4>🚨 Lost & Found Alerts</h4>
+          <p><strong>Missing Dog:</strong> Brown male dog with a blue collar, last seen near the public market on Monday morning.</p>
+          <p>Contact: <strong>0975-427-0133</strong></p>
+        </div>
+        <div class="alert-card event">
+          <h4>💉 Free Vaccine Drive</h4>
+          <p><strong>Free Anti-Rabies Vaccination:</strong> Saturday, November 28 • 8:00 AM – 12:00 PM at the Barangay 2 Covered Court.</p>
+          <p>Bring pets on a leash or in a carrier.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal 1: Bantay -->
+  <div id="modal-bantay" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="title-bantay" onclick="closeOnBackdrop(event, 'modal-bantay')">
+    <div class="modal-box">
+      <button type="button" class="modal-close" aria-label="Close Bantay's profile" onclick="closePetModal('modal-bantay')">✕</button>
+      <div class="modal-layout">
+        <div class="modal-media">
+          <img src="bantay.jpg" alt="Bantay" class="modal-photo">
+          <div class="health-badges">
+            <span class="h-badge">✓ Anti-Rabies</span>
+            <span class="h-badge">✓ Dewormed</span>
+            <span class="h-badge">✓ Kid-Friendly</span>
+          </div>
+        </div>
+        <div class="modal-details">
+          <span class="tag dog">Dog • Male • 1 Year Old</span>
+          <h3 id="title-bantay">Hi, I'm Bantay! 🐶</h3>
+          <p class="story">Bantay was found sheltering outside the barangay hall during a rainy afternoon. Despite his tough start, he greets everyone with a wagging tail and soft eyes. He loves lounging beside your feet and going on calm evening walks.</p>
+          
+          <div class="traits-box">
+            <strong>Personality:</strong> Gentle • Loyal • House-trained • Good with other dogs
+          </div>
+
+          <form class="adopt-form" onsubmit="submitAdoption(event, 'Bantay')">
+            <h4>🏡 Interested in Adopting Bantay?</h4>
+            <input type="text" placeholder="Your Full Name" required>
+            <input type="tel" placeholder="Your Phone Number (e.g., 0917...)" required>
+            <textarea rows="2" placeholder="Tell us a little about your home..." required></textarea>
+            <button type="submit" class="btn-adopt">Send Adoption Request ♡</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 2: Muning -->
+  <div id="modal-muning" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="title-muning" onclick="closeOnBackdrop(event, 'modal-muning')">
+    <div class="modal-box">
+      <button type="button" class="modal-close" aria-label="Close Muning's profile" onclick="closePetModal('modal-muning')">✕</button>
+      <div class="modal-layout">
+        <div class="modal-media">
+          <img src="Muning.jpeg" alt="Muning" class="modal-photo">
+          <div class="health-badges">
+            <span class="h-badge">✓ Litter-Trained</span>
+            <span class="h-badge">✓ Dewormed</span>
+            <span class="h-badge">✓ Indoor Cat</span>
+          </div>
+        </div>
+        <div class="modal-details">
+          <span class="tag cat">Cat • Female • 6 Months Old</span>
+          <h3 id="title-muning">Purr-lo, I'm Muning! 🐱</h3>
+          <p class="story">Muning was rescued as a tiny kitten near the neighborhood bakery. She has grown into a cozy, affectionate tabby who purrs the second you pick her up. Her favorite hobby is watching birds from a sunny windowsill.</p>
+          
+          <div class="traits-box">
+            <strong>Personality:</strong> Calm • Affectionate • Quiet • Clean & Litter-trained
+          </div>
+
+          <form class="adopt-form" onsubmit="submitAdoption(event, 'Muning')">
+            <h4>🏡 Interested in Adopting Muning?</h4>
+            <input type="text" placeholder="Your Full Name" required>
+            <input type="tel" placeholder="Your Phone Number (e.g., 0917...)" required>
+            <textarea rows="2" placeholder="Tell us a little about your home..." required></textarea>
+            <button type="submit" class="btn-adopt">Send Adoption Request ♡</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 3: Upin -->
+  <div id="modal-upin" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="title-upin" onclick="closeOnBackdrop(event, 'modal-upin')">
+    <div class="modal-box">
+      <button type="button" class="modal-close" aria-label="Close Upin's profile" onclick="closePetModal('modal-upin')">✕</button>
+      <div class="modal-layout">
+        <div class="modal-media">
+          <img src="Upin and Ipin.jpg" alt="Upin" class="modal-photo">
+          <div class="health-badges">
+            <span class="h-badge">✓ 1st Puppy Shot</span>
+            <span class="h-badge">✓ Dewormed</span>
+            <span class="h-badge">✓ Playful</span>
+          </div>
+        </div>
+        <div class="modal-details">
+          <span class="tag puppy">Puppy • Male • 4 Months Old</span>
+          <h3 id="title-upin">Woof! I'm Upin! 🐾</h3>
+          <p class="story">Upin is a bundle of sunshine who loves chasing rolled-up socks and making new friends. He already knows how to sit for treats and would thrive with an active family or a yard where he can safely explore.</p>
+          
+          <div class="traits-box">
+            <strong>Personality:</strong> Energetic • Smart • Social • Loves toys & treats
+          </div>
+
+          <form class="adopt-form" onsubmit="submitAdoption(event, 'Upin')">
+            <h4>🏡 Interested in Adopting Upin?</h4>
+            <input type="text" placeholder="Your Full Name" required>
+            <input type="tel" placeholder="Your Phone Number (e.g., 0917...)" required>
+            <textarea rows="2" placeholder="Tell us a little about your home..." required></textarea>
+            <button type="submit" class="btn-adopt">Send Adoption Request ♡</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>Paws & Homes Community Volunteer Group • Found a stray? Email us at <strong>rescue@community.org</strong></p>
+    </div>
+  </footer>
+
+  <!-- Interactive Modal Script -->
+  <script>
+    function openPetModal(modalId) {
+      const modal = document.getElementById(modalId);
+      if (modal) {
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+    }
+
+    function closePetModal(modalId) {
+      const modal = document.getElementById(modalId);
+      if (modal) {
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+    }
+
+    function closeOnBackdrop(event, modalId) {
+      if (event.target.id === modalId) {
+        closePetModal(modalId);
+      }
+    }
+
+    document.addEventListener('keydown', function(event) {
+      if (event.key === 'Escape') {
+        document.querySelectorAll('.modal-backdrop.active').forEach(modal => {
+          modal.classList.remove('active');
+        });
+        document.body.style.overflow = '';
+      }
+    });
+
+    function submitAdoption(event, petName) {
+      event.preventDefault();
+      const form = event.target;
+      form.innerHTML = `
+        <div class="form-success">
+          🎉 <strong>Thank you!</strong> Your adoption request for <strong>${petName}</strong> has been received. Our community volunteers will text or call you soon!
+        </div>
+      `;
+    }
+  </script>
+
+</body>
+</html>
